@@ -1,0 +1,49 @@
+<%= include ./includes/header.ejs %>
+
+<div class="row">
+	<form action="/admin/video/new" class="form-horizontal" meth="post">
+		<div class="form-group">
+			<label for="inputTitle" class="col-sm-2 control-label">视频名称</label>
+			<div class="col-sm-10">
+				<input type="text" name="video[title]" id="inputTitle" class="form-control" value="<%= video.title %>">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="inputCountry" class="col-sm-2 control-label">国家</label>
+			<div class="col-sm-10">
+				<input type="text" name="video[country]" id="inputCountry" class="form-control" value="<%= video.country %>">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="inputYear" class="col-sm-2 control-label">年份</label>
+			<div class="col-sm-10">
+				<input type="text" name="video[year]" id="inputYear" class="form-control" value="<%= video.year %>">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="inputPoster" class="col-sm-2 control-label">封面</label>
+			<div class="col-sm-10">
+				<input type="text" name="video[poster]" id="inputPoster" class="form-control" value="<%= video.poster %>">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="inputUrl" class="col-sm-2 control-label">地址</label>
+			<div class="col-sm-10">
+				<input type="text" name="video[url]" id="inputUrl" class="form-control" value="<%= video.url %>">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="inputSummary" class="col-sm-2 control-label">地址</label>
+			<div class="col-sm-10">
+				<textarea type="text" name="video[summary]" id="inputSummary" class="form-control" value="<%= video.summary %>"></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-2 col-sm-10">
+				<button class="btn btn-default" type="submit">录入</button>
+			</div>
+		</div>
+	</form>
+</div>
+
+<%= include ./includes/footer.ejs %>
